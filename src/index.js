@@ -40,7 +40,6 @@ function checksTodoExists(request, response, next) {
   const { username } = request.headers;
   const { id } = request.params;
 
-
   const isTodoValid = validate(id);
 
   if (!isTodoValid) {
@@ -58,7 +57,6 @@ function checksTodoExists(request, response, next) {
   request.todo = userTodo;
 
   return next();
-
 }
 
 function findUserById(request, response, next) {
